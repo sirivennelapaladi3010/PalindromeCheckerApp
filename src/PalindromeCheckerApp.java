@@ -2,14 +2,15 @@
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
 
-        String word = "radar";
+        String input = "Madam In Eden";
+        String normalized = input.replaceAll("\\s+", "").toLowerCase();
 
-        boolean isPalindrome = checkPalindrome(word, 0, word.length() - 1);
+        boolean isPalindrome = checkPalindrome(normalized, 0, normalized.length() - 1);
 
         if (isPalindrome) {
-            System.out.println(word + " is a Palindrome.");
+            System.out.println(input + " is a Palindrome (ignoring case and spaces).");
         } else {
-            System.out.println(word + " is not a Palindrome.");
+            System.out.println(input + " is not a Palindrome (ignoring case and spaces).");
         }
     }
 
